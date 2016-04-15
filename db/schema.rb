@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160415122206) do
+ActiveRecord::Schema.define(version: 20160415122530) do
 
   create_table "pages", force: :cascade do |t|
     t.integer  "page_num"
     t.text     "story_text"
     t.text     "choice_1"
-    t.text     "choice2"
+    t.text     "choice_2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
