@@ -1,0 +1,17 @@
+$font-stack-normal: 'Merriweather', serif;
+
+$font-size-default: 13pt;
+
+$line-height-default: 1.8em;
+
+body {
+	font-family: $font-stack-normal;
+	font-size: $font-size-default;
+	line-height: $line-height-default;
+}
+
+div.container {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
