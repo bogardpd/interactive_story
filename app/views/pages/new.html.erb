@@ -1,2 +1,18 @@
-<h1>Pages#new</h1>
-<p>Find me in app/views/pages/new.html.erb</p>
+<% provide(:title, "Write Page #{@page_number}")%>
+
+<h1>Write Page <%= @page_number %></h1>
+
+<%= form_for(@page) do |f| %>
+
+	<%= f.label :story_text, "Story" %><br />
+	<%= f.text_area :story_text, rows: 15 %>
+	
+	<%= f.label :choice_1 %><br />
+	<%= f.text_field :choice_1, maxlength: 255 %>
+
+	<%= f.label :choice_2 %><br />
+	<%= f.text_field :choice_2, maxlength: 255 %>
+
+	<%= f.submit "Post this page" %>
+
+<% end %>
