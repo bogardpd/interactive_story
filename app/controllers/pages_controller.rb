@@ -44,7 +44,7 @@ class PagesController < ApplicationController
   private
   
     def page_params
-      params.require(:page).permit(:page_num, :story_text, :choice_1, :choice_2)
+      params.require(:page).permit(:page_num, :story_text, :choice_1, :choice_2, :nickname)
     end
   
 end

@@ -11,3 +11,7 @@
 <p><%= link_to(@page.choice_1, page_path(@page_number.to_i*2), class: "choice") %></p>
 
 <p><%= link_to(@page.choice_2, page_path(@page_number.to_i*2+1), class: "choice") %></p>
+
+<hr />
+
+<p class="tiny_info">Written by <b><%= @page.nickname %></b></p>

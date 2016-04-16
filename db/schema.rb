@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160416133217) do
+ActiveRecord::Schema.define(version: 20160416232710) do
 
   create_table "pages", force: :cascade do |t|
     t.integer  "page_num"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160416133217) do
     t.text     "choice_2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "nickname"
   end
 
   add_index "pages", ["page_num"], name: "index_pages_on_page_num", unique: true

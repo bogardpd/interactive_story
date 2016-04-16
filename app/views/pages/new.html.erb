@@ -6,9 +6,9 @@
 
 <% if @page.errors.any? %>
 	<div class="error">
-		<div>The form contains <%= plurarlize(@page.errors.count, "error") %>.</div>
+		<div>The form contains <%= pluralize(@page.errors.count, "error") %>.</div>
 		<ul>
-			<%= @user.errors.full_messages.each do |msg| %>
+			<% @page.errors.full_messages.each do |msg| %>
 				<li><%= msg %></li>
 			<% end %>
 		</ul>
@@ -25,6 +25,9 @@
 
 	<%= f.label :choice_2 %><br />
 	<%= f.text_field :choice_2, maxlength: 255 %>
+	
+	<%= f.label :nickname, "Your nickname" %><br />
+	<%= f.text_field :nickname, maxlength: 50 %>
 	
 	<%= f.hidden_field :page_num, value: @page_number %>
 	
