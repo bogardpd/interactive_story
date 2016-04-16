@@ -1,3 +1,13 @@
 <% provide(:title, "Page #{@page_number}")%>
 
+<p class="right"><%= link_to "Restart the story", root_path %></p>
+
 <h1>Page <%= @page_number %></h1>
+
+<%= simple_format(@page.story_text.gsub(/\n+/,"\n\n")) %>
+
+<hr />
+
+<p><%= link_to(@page.choice_1, page_path(@page_number.to_i*2), class: "choice") %></p>
+
+<p><%= link_to(@page.choice_2, page_path(@page_number.to_i*2+1), class: "choice") %></p>

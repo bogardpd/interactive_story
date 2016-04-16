@@ -1,5 +1,7 @@
 <% provide(:title, "Write Page #{@page_number}")%>
 
+<p class="right"><%= link_to "Restart the story", root_path %></p>
+
 <h1>Write Page <%= @page_number %></h1>
 
 <% if @page.errors.any? %>

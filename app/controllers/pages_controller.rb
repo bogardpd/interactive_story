@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   def new
     @page_number = session[:new_page_number]
     redirect_to root_path if @page_number.nil?
-    if (@page_number.to_i > 1 && Page.where(@page_number => (@page_number.to_i)/2).first.nil?)
+    if (@page_number.to_i > 1 && Page.where(:page_num => (@page_number.to_i)/2).first.nil?)
       # Parent page does not exist, so don't create this page
       redirect_to root_path 
     end
@@ -18,7 +18,7 @@ class PagesController < ApplicationController
   
   def create
     @page_number = params['page_num']
-    if (@page_number.to_i > 1 && Page.where(@page_number => (@page_number.to_i)/2).first.nil?)
+    if (@page_number.to_i > 1 && Page.where(:page_num => (@page_number.to_i)/2).first.nil?)
       # Parent page does not exist, so don't create this page
       redirect_to root_path 
     end
