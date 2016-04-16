@@ -16,6 +16,10 @@ div.container {
 	margin-right: auto;
 }
 
+div.error {
+	color: #FF0000;
+}
+
 textarea, input {
 	width: 100%;
 	font-family: $font-stack-normal;
